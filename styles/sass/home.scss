@@ -7,7 +7,12 @@
 body{
     background-color: #F8F2EB;
 }
-.a965_header{
+body.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+/*.a965_header{
     background-color: #F8F2EB;
     padding: 60px 60px 0px 60px;
     &_content{
@@ -19,7 +24,115 @@ body{
     display: flex;
     text-align: right;
     }
+}*/
+
+.off_screen_menu{
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    min-width: 1280px;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 40px;
+    overflow-y: hidden;
+    transition: .3s ease;
+    img{
+        width: 90px;
+        padding-bottom: 40px;
+    }
+    li{
+        padding-top: 20px;
+    }
+    a{
+        color: #fff;
+        font-size: 42px;
+        line-height: 58px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-left: 120px;
+    }
+    a:hover{
+        text-decoration: underline;
+        transition: 1s ease;
+        transition-delay: .1s;
+    }
+    /*mobile*/
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        padding: 40px;
+        img{
+            width: 40px;
+        }
+        a{
+            font-size: 24px;
+            padding-left:0px;
+        }
+
+    }
+    /*tablets*/
+    @media screen and (min-width: 481px) and (max-width: 768px){
+    }
+    /*desktop*/
+    @media screen and (min-width: 769px) and (max-width: 1280px){
+    }
 }
+
+.off_screen_menu.active{
+    opacity: 100%;
+}
+
+nav{
+    padding-top: 40px;
+    padding-right: 40px;
+    display: flex;
+}
+.a965_header_hammenu{
+    height: 30px;
+    width: 35px;
+    margin-left: auto;
+    position: relative;
+}
+
+.a965_header_hammenu span{
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.a965_header_hammenu span:nth-child(1){
+    top: 25%;
+}
+.a965_header_hammenu span:nth-child(2){
+    top: 75%;
+}
+
+.a965_header_hammenu.active span{
+    background-color: #F8F2EB;
+}
+.a965_header_hammenu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.a965_header_hammenu.active span:nth-child(2){
+    opacity: 0;
+}
+.a965_header_hammenu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-30deg);
+}
+
 
 .a965_hero{
     overflow-x: hidden;
@@ -37,6 +150,9 @@ body{
         justify-content: center;
         align-items: center;
         gap: 32px;
+        img{
+            width: 120px;
+        }
         &_title{
             font-size: 54px;
             line-height: 64px;
@@ -46,15 +162,44 @@ body{
             line-height: 24px;
         }
     }
+    /*mobile*/
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        .a965_hero{
+            padding-bottom: 100px;
+            &_content{
+                img{
+                    width: 80px
+                }
+                &_title{
+                    font-size: 32px;
+                    line-height: 36px;
+                    width: 75%;
+                }
+                &_para{
+                    font-size: 12px;
+                    line-height: 16px; 
+                    width: 75%;
+                }
+            }
+        }
+    }
+    /*tablets*/
+    @media screen and (min-width: 481px) and (max-width: 768px){
+    }
+    /*desktop*/
+    @media screen and (min-width: 769px) and (max-width: 1280px){
+    }
 }
 
 .a965_festivals{
     position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     &_bg{
         position: absolute;
         width: 100%;
+        height: 100vh;
         object-fit: cover;
         z-index:1;
     }
@@ -127,6 +272,10 @@ body{
             margin-left: -120px;
         }
     }
+}
+.a965_frame1.hover img{
+    background-color: #ECB572;
+
 }
 
 .a965_frame2 {
