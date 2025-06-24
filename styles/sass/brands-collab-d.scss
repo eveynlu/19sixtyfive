@@ -1,0 +1,47 @@
+*{
+    /*outline: 1px solid red;*/
+}
+
+.a965_brand_index{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F2EB;
+    padding-top: 5vh;
+    &_list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10vh;
+    }
+    &_text{
+        padding-left: 3vw;
+    }
+    h2{
+        font-size: 2rem;
+        padding-bottom: 1.8vh;
+        line-height: 2.5rem;
+        width: 30vw;
+        font-weight: 300;
+    }
+    img{
+        width: 20vw;
+    }
+    button{
+        background-color: #000;
+        padding: 1rem 3rem 1rem 3rem;
+        color: #fff;
+    }
+}
+
+.a965_load{
+    padding-top: 4vh;
+    padding-bottom: 10vh;
+    a{
+    text-decoration: underline;
+    font-size: 1.3rem;
+    font-weight: 300;
+    }
+}

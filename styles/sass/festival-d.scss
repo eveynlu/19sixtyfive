@@ -1,0 +1,30 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  /*outline: 1px solid red;*/
+}
+
+.a965_gallery_top{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    img{
+        width: 20vw;
+        padding: 0.8vw;
+    }
+}
+
+.a965_gallery_bottom{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20vh;
+    img{
+        width: 20vw;
+        padding: 0.8vw;
+    }
+}
+.a965_2img{
+    h2{
+        font-size: 42px;
+        padding-bottom: 2vh;
+    }
+}
