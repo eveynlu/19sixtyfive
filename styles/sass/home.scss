@@ -8,22 +8,27 @@ body{
 }
 body.no-scroll{
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 }
 
-/*.a965_header{
-    background-color: #F8F2EB;
-    padding: 60px 60px 0px 60px;
-    &_content{
-    width: 100%; 
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    text-align: right;
-    }
-}*/
+p{
+    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 0.8358974358974359rem + 0.2735042735042735vw, 1rem);
+    line-height: 1.5rem;
+}
+
+h1{
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.1987179487179487rem + 3.418803418803419vw, 3.25rem);
+    line-height: 4rem;
+}
+
+h2{
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 0.3846153846153846rem + 3.6923076923076925vw, 2.6rem);
+    line-height: 58px;
+    font-weight: 200px;
+}
 
 .off_screen_menu{
     background-color: #000;
@@ -65,24 +70,6 @@ body.no-scroll{
         text-decoration: underline;
         transition: 1s ease;
         transition-delay: .1s;
-    }
-    /*mobile*/
-    @media screen and (min-width: 320px) and (max-width: 480px){
-        padding: 2.5rem;
-        img{
-            width: 2.5rem;
-        }
-        a{
-            font-size: 1.5rem;
-            padding-left: 0rem;
-        }
-
-    }
-    /*tablets*/
-    @media screen and (min-width: 481px) and (max-width: 768px){
-    }
-    /*desktop*/
-    @media screen and (min-width: 769px) and (max-width: 1280px){
     }
 }
 
@@ -148,8 +135,7 @@ nav{
 .a965_hero{
     overflow-x: hidden;
     background-color: #F8F2EB;
-    padding-top: 120px;
-    padding-bottom: 200px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,74 +146,31 @@ nav{
         flex-direction:column;
         justify-content: center;
         align-items: center;
-        gap: 32px;
+        gap: 1.5rem;
+        width: 60vw;
         img{
-            width: 120px;
+            width: 7rem;
         }
-        &_title{
-            font-size: 54px;
-            line-height: 64px;
-        }
-        &_para{
-            width: 460px;
-            line-height: 24px;
-        }
-    }
-    /*mobile*/
-    @media screen and (min-width: 320px) and (max-width: 480px){
-        .a965_hero{
-            padding-bottom: 100px;
-            &_content{
-                img{
-                    width: 80px
-                }
-                &_title{
-                    font-size: 32px;
-                    line-height: 36px;
-                    width: 75%;
-                }
-                &_para{
-                    font-size: 12px;
-                    line-height: 16px; 
-                    width: 75%;
-                }
-            }
-        }
-    }
-    /*tablets*/
-    @media screen and (min-width: 481px) and (max-width: 768px){
-    }
-    /*desktop*/
-    @media screen and (min-width: 769px) and (max-width: 1280px){
     }
 }
-
-.a965_festivals{
-    position: relative;
+.a965_festivals1{
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    &_bg{
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        z-index:1;
-    }
-    &_text{
+    background-image: url('../images/home/festivals.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    div{
         position: relative;
         z-index:2;
         color: white;
         display: flex;
-        padding-top: 540px;
-        padding-right: 80px;
-        padding-left: 80px;
         flex-direction: row;
+        align-items:flex-end; 
         justify-content: space-between;
-        align-items:flex-end;
-        font-size: 42px;
-        line-height: 58px;
-        font-weight: 200px;
+        padding-top: 33rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
     a{
         font-size: 21px;
@@ -236,19 +179,58 @@ nav{
         color: #fff;
         
     }
+    @media (width >=40rem){
+
+    }
+    @media (width >=60rem){
+        height: 100vh;
+    }
+}
+
+.a965_festivals2{
+    width: 100%;
+    background-image: url('../images/home/Brands\ Collab.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    div{
+        position: relative;
+        z-index:2;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end; 
+        justify-content: space-between;
+        padding-top: 33rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    a{
+        font-size: 21px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: #fff;
+        
+    }
+    @media (width >=40rem){
+
+    }
+    @media (width >=60rem){
+        height: 100vh;
+    }
 }
 
 .a965_frame1 {
     background-color: #305966;
     display: flex;
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
     align-items: center;
     justify-content: flex-start;
-    padding: 80px;
-    
+    padding: 5rem;
     img{
-        width: 300px;
+        width: 18rem;
     }
 
     a{
@@ -259,28 +241,27 @@ nav{
     }
 
     &_content{
-        padding-top: 80px;
         width: 100%;
         &_left{
             display: flex;
             justify-content: flex-start;
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
         }
         &_right{
             display: flex;
             justify-content: flex-end;
-            margin-right: 200px;
+            margin-right: 12.5rem;
         }
         &_text{
-            padding-bottom: 60px;
+            padding-bottom: 3rem;
         }
         &_left_text{
-            padding: 40px;
-            margin-left: -120px;
+            padding: 2.5rem;
+            margin-left: -7.5rem;
         }
         &_right_text{
-            padding: 40px;
-            margin-left: -120px;
+            padding: 2.5rem;
+            margin-left: -7.5rem;
         }
     }
     &.hover{
@@ -294,6 +275,14 @@ nav{
     &.hover2{
         background-color: #71335B;
         transition: background-color 0.3s ease;
+    }
+
+    /*tablet*/
+    @media (width >=40rem){
+
+    }
+    @media (width >=60rem){
+
     }
 }
 

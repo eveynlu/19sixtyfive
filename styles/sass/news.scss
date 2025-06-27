@@ -1,0 +1,16 @@
+.a965_news{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5rem;
+    &_list{
+        display: flex;
+        padding: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        img{
+            width: 15vw;
+        }
+    }
+}

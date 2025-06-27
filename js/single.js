@@ -11,7 +11,7 @@ list.forEach(list => {
     });
 });
 
-/*change arrow*/
+/*change arrow-white*/
 const festlist = document.getElementById('a965_row');
 const arrow = document.getElementById('list-arrow');
 
@@ -21,4 +21,13 @@ festlist.addEventListener('mouseover', ()=>{
 
 festlist.addEventListener('mouseout', ()=>{
     arrow.src = 'images/logo-icons/Arrow Icon.svg'
+})
+
+/*lists animation black*/
+const listBlack = document.querySelectorAll('.a965_rowblack');
+
+listBlack.forEach(listBlack => {
+    listBlack.addEventListener('mouseover', ()=>{
+        listBlack.classList.add('hover');
+    })
 })
