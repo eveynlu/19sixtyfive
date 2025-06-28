@@ -138,7 +138,8 @@ h2 {
 }
 
 .off_screen_menu {
-  background-color: #000;
+  z-index: 2000 !important;
+  background-color: #000 !important;
   height: 100vh;
   width: 100%;
   min-width: 80rem;
@@ -192,17 +193,40 @@ h2 {
   z-index: 1;
 }
 
+.off_screen_menu .a965_header_hammenu.close {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  z-index: 2100;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 nav {
   padding-top: 40px;
   padding-right: 40px;
   display: flex;
+  align-items: flex-start !important;
 }
 
 .a965_header_hammenu {
-  height: 40px;
+  cursor: pointer;
   width: 40px;
+  height: 40px;
   margin-left: auto;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .a965_header_hammenu span {
@@ -240,6 +264,51 @@ nav {
 .a965_header_hammenu.active span:nth-child(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.a965_header_hammenu.close span {
+  background-color: #fff !important;
+}
+.a965_header_hammenu.close span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.a965_header_hammenu.close span:nth-child(2) {
+  opacity: 0;
+}
+.a965_header_hammenu.close span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .off_screen_menu {
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .off_screen_menu .a965_header_hammenu.close {
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+  .off_screen_menu a {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+  }
+  .a965_header_hammenu {
+    width: 32px;
+    height: 32px;
+  }
+  .a965_header_hammenu span {
+    height: 3px;
+    border-radius: 1.5px;
+  }
 }
 
 .a965_hero {
