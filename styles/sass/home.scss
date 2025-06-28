@@ -1,6 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  /*outline: 1px solid red;*/
+  outline: 1px solid red;
 }
 
 body{
@@ -8,26 +8,49 @@ body{
 }
 body.no-scroll{
     overflow: hidden;
+    width: 100%;
     height: 100%;
 }
 
 p{
-    font-size: 0.9rem;
-    font-size: clamp(0.9rem, 0.8358974358974359rem + 0.2735042735042735vw, 1rem);
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    /*mobile*/
+    @media (min-width: 20rem) and (max-width: 40rem){
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    /*tablet*/
+    @media (min-width: 40rem) and (max-width: 60rem){
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }
 
 h1{
-    font-size: 2rem;
-    font-size: clamp(2rem, 1.1987179487179487rem + 3.418803418803419vw, 3.25rem);
+    font-size: 3.5rem;
     line-height: 4rem;
+    @media (min-width: 20rem) and (max-width: 40rem){
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media (min-width: 41rem) and (max-width: 60rem){
+        font-size: 3rem;
+        line-height: 4rem;
+    }
 }
 
 h2{
-    font-size: 1.25rem;
-    font-size: clamp(1.25rem, 0.3846153846153846rem + 3.6923076923076925vw, 2.6rem);
-    line-height: 58px;
+    font-size: 2.6rem;
+    line-height: 3.6rem;
     font-weight: 200px;
+    @media (min-width: 20rem) and (max-width: 40rem){
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+    @media (min-width: 41rem) and (max-width: 60rem){
+        font-size: 2.6rem;
+    }
 }
 
 .off_screen_menu{
@@ -135,6 +158,7 @@ nav{
 .a965_hero{
     overflow-x: hidden;
     background-color: #F8F2EB;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -147,30 +171,49 @@ nav{
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
-        width: 60vw;
+        width: 78vw;
         img{
             width: 7rem;
         }
     }
+    /*mobile*/
+    @media (min-width: 20rem) and (max-width: 40rem){
+        width: 100vw;
+        &_content{
+            width: 80vw;
+        }
+    }
+    /*tablet*/
+    @media (min-width: 40rem) and (max-width: 60rem){
+        &_content{
+            width: 80vw;
+        }
+    }
+    
 }
 .a965_festivals1{
     width: 100%;
+    height: 45rem;
     background-image: url('../images/home/festivals.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     div{
         position: relative;
         z-index:2;
         color: white;
         display: flex;
         flex-direction: row;
-        align-items:flex-end; 
-        justify-content: space-between;
-        padding-top: 33rem;
+        align-items:flex-end;
+        justify-content: space-between; 
+        padding-top: 45rem;
         padding-left: 5rem;
         padding-right: 5rem;
+        padding-bottom: 5rem;
     }
     a{
         font-size: 21px;
@@ -179,16 +222,30 @@ nav{
         color: #fff;
         
     }
-    @media (width >=40rem){
-
+    @media (min-width: 20rem) and (max-width: 40rem){
+        div{
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 30rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 5rem;
+        }
+        a{
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
     }
-    @media (width >=60rem){
-        height: 100vh;
+    @media (min-width: 41rem) and (max-width: 60rem){
+        div{
+            padding-bottom: 8rem;
+        }
     }
 }
 
 .a965_festivals2{
     width: 100%;
+    height: 45rem;
     background-image: url('../images/home/Brands\ Collab.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -213,11 +270,24 @@ nav{
         color: #fff;
         
     }
-    @media (width >=40rem){
-
+    @media (min-width: 20rem) and (max-width: 40rem){
+        div{
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 30rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 5rem;
+        }
+        a{
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
     }
-    @media (width >=60rem){
-        height: 100vh;
+    @media (min-width: 41rem) and (max-width: 60rem){
+        div{
+            padding-bottom: 8rem;
+        }
     }
 }
 
@@ -225,7 +295,7 @@ nav{
     background-color: #305966;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 60rem;
     align-items: center;
     justify-content: flex-start;
     padding: 5rem;
@@ -242,6 +312,7 @@ nav{
 
     &_content{
         width: 100%;
+        height: 40rem;
         &_left{
             display: flex;
             justify-content: flex-start;
@@ -276,13 +347,41 @@ nav{
         background-color: #71335B;
         transition: background-color 0.3s ease;
     }
+    @media (min-width: 20rem) and (max-width: 40rem){
+        padding: 2rem;
+        height: 40rem;
+        img{
+            width: 10rem;
+            object-fit: cover;
+        }
+        a{
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+        &_content{
+            gap: 5rem;
+            height: auto;
+            &_left{
+                margin-top: 0;
+                margin-bottom: 2.5rem;
+            }
+            &_right{
+                margin-right: 0rem;
+                margin-left: 3rem;
+                justify-content: flex-end;
+            }
+            &_left_text{
+                padding-top: 1rem;
+                margin-left: -4rem;
+            }
+            &_right_text{
+                padding-top: 1rem;
+                margin-left: -4rem;
+            }
 
-    /*tablet*/
-    @media (width >=40rem){
-
-    }
-    @media (width >=60rem){
-
+        }
+    @media (min-width: 41rem) and (max-width: 60rem){
+        }
     }
 }
 
@@ -290,13 +389,12 @@ nav{
     background-color: #ECB572;
     display: flex;
     width: 100vw;
-    height: 1000px;
+    height: 60rem;
     align-items: center;
     justify-content: flex-start;
-    padding: 80px;
-    
+    padding: 5rem;
     img{
-        width: 300px;
+        width: 18rem;
     }
 
     a{
@@ -307,32 +405,37 @@ nav{
     }
 
     &_content{
-        padding-top: 80px;
         width: 100%;
+        height: 40rem;
         &_left{
             display: flex;
             justify-content: flex-start;
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
         }
         &_right{
             display: flex;
             justify-content: flex-end;
-            margin-right: 200px;
+            margin-right: 12.5rem;
         }
         &_text{
-            padding-bottom: 60px;
+            padding-bottom: 3rem;
         }
         &_left_text{
-            padding: 40px;
-            margin-left: -120px;
+            padding: 2.5rem;
+            margin-left: -7.5rem;
+            padding-left: 0;
+            padding-right: 0;
         }
         &_right_text{
-            padding: 40px;
-            margin-left: -120px;
+            padding: 2.5rem;
+            margin-left: -7.5rem;
+            padding-left: 0;
+            padding-right: 0;
         }
+        
     }
     &.hover{
-        background-color: #B73E31;
+        background-color: #ECB572;
         transition: background-color 0.3s ease;
         &_left_text{
             padding: 60px;
@@ -340,8 +443,47 @@ nav{
         }
     }
     &.hover2{
-        background-color: #000;
+        background-color: #71335B;
         transition: background-color 0.3s ease;
+    }
+    @media (min-width: 20rem) and (max-width: 40rem){
+        padding: 2rem;
+        height: 40rem;
+        img{
+            width: 10rem;
+            object-fit: cover;
+        }
+        a{
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+        &_content{
+            gap: 2rem;
+            height: auto;
+            &_left{
+                margin-top: 0;
+                margin-bottom: 2.5rem;
+            }
+            &_right{
+                padding: 0;
+                margin-right: 0rem;
+                margin-left: 3rem;
+                justify-content: flex-end;
+            }
+            &_left_text{
+                padding-top: 1rem;
+                margin-left: -4rem;
+            }
+            &_right_text{
+                padding-top: 1rem;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: -4rem;
+            }
+
+        }
+    @media (min-width: 41rem) and (max-width: 60rem){
+        }
     }
 }
 
@@ -349,14 +491,24 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 700px;
+    height: 43rem;
     margin: 0 auto;
 
     img{
-        width: 280px;
+        width: 16rem;
     }
+    @media (min-width: 20rem) and (max-width: 40rem){
+        height: 100vh;
+        flex-direction: column;
+        margin: 0 auto;
+        }
+        img{
+            width: 12rem;
+        }
+    @media (min-width: 41rem) and (max-width: 60rem){
+        }
 }
-
+å
 .a965_footer{
     display: flex;
     justify-content: space-evenly;
