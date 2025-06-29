@@ -736,15 +736,12 @@ h1 {
   justify-content: space-between;
 }
 .a965_word_content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.a965_word h4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.a965_word p {
+.a965_word_content p {
   width: 48rem;
   font-size: 2.4rem;
   line-height: 3.6rem;
