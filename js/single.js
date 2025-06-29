@@ -1,4 +1,4 @@
-/*Lists animation*/
+/*Lists animation white*/
 const list = document.querySelectorAll('.a965_row');
 
 list.forEach(list => {
@@ -12,22 +12,15 @@ list.forEach(list => {
 });
 
 /*change arrow-white*/
-const festlist = document.getElementById('a965_row');
-const arrow = document.getElementById('list-arrow');
+const festlist = document.querySelectorAll('.a965_row');
 
-festlist.addEventListener('mouseover', ()=>{
-    arrow.src = 'images/logo-icons/Arrow Icon-Hover.svg';  
-});
+festlist.forEach(item => {
+    const arrow = item.querySelector('.list-arrow');
 
-festlist.addEventListener('mouseout', ()=>{
-    arrow.src = 'images/logo-icons/Arrow Icon.svg'
-})
-
-/*lists animation black*/
-const listBlack = document.querySelectorAll('.a965_rowblack');
-
-listBlack.forEach(listBlack => {
-    listBlack.addEventListener('mouseover', ()=>{
-        listBlack.classList.add('hover');
+    item.addEventListener('mouseover', () =>{
+        if (arrow) arrow.src = 'images/logo-icons/Arrow Icon-Hover.svg';
+    })
+    item.addEventListener('mouseout', () => {
+        if (arrow) arrow.src = 'images/logo-icons/Arrow Icon.svg'
     })
 })
