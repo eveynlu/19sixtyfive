@@ -298,8 +298,8 @@ nav {
 .a965_festivals1 {
   width: 100%;
   height: 45rem;
-  background-image: url("../images/home/festivals.png");
   background-size: cover;
+  background-image: url("../images/home/festivals.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
