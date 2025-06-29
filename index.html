@@ -9,9 +9,24 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+   
     <header id="a965_header" class="a965_header">
+        <nav>
+            <div class="a965_header_hammenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
         <div class="off_screen_menu">
-            <img src="images/logo-icons/19sixtyfive Logo-white.svg" alt="logo-1965">
+            <a style="padding: 0;" href="index.html">
+                <img src="images/logo-icons/19sixtyfive Logo-white.svg" alt="logo-1965">
+            </a>
+            <button class="a965_header_hammenu close" aria-label="Close menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="a965_header_menu">
                 <ul>
                     <li><a href="single.html">Festivals</a></li>
@@ -24,13 +39,6 @@
                 </ul>
             </div>
         </div>
-        <nav id="a965_navbar">
-            <div class="a965_header_hammenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
     </header>
     <section id="a965_hero" class="a965_hero">
         <div class="a965_hero_content">
@@ -48,13 +56,13 @@
     <section id="a965_frame" class="a965_frame1">
         <div class="a965_frame1_content">
             <div class="a965_frame1_content_left">
-                <img src="images/home/Community.png" alt="Community" />
+                <img class="a975_img_left" src="images/home/Community.png" alt="Community" />
                 <div class="a965_frame1_content_left_text">
                     <a href="#">The Community:<br>Same Series,<br>Fresh Takes.</a>
                 </div>
             </div>
             <div class="a965_frame1_content_right">
-                <img src="images/home/Artist Spotlight.png" alt="Artist Spotlight" />
+                <img class="a975_img_right" src="images/home/Artist Spotlight.png" alt="Artist Spotlight" />
                 <div class="a965_frame1_content_right_text">
                 <a href="#">Artist Spotlight:<br>For The Love Of Live.</a>
                 </div>
@@ -120,6 +128,7 @@
         </ul>
     </footer>
     <!--Javascript-->
+    <script src="js/navbar.js"></script>
     <script src="js/query.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -5,9 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brands Collab - H&M</title>
     <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        #a965_header {
+            background: none !important;
+            box-shadow: none !important;
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            z-index: 10;
+            padding-top: 0;
+        }
+        
+        #a965_header nav {
+            background: none !important;
+            padding-top: 40px !important;
+            padding-right: 40px !important;
+            display: flex;
+            align-items: flex-start !important;
+        }
+        
+        #a965_header img {
+            margin-left: 2.5rem;
+            width: 80px;
+            height: auto;
+        }
+        
+        #a965_header .a965_header_hammenu span {
+            background-color: #fff !important;
+        }
+        
+        #a965_festlogo {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        #a965_festlogo .a965_festlogo_bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        #a965_festlogo .a965_festlogo_content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 100%;
+            padding: 0 0 60px 60px;
+        }
+        
+        #a965_festlogo .a965_festlogo_content h2 {
+            font-size: 42px;
+            line-height: 58px;
+            font-weight: 200;
+            text-align: left;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            #a965_header nav {
+                padding-top: 16px !important;
+                padding-right: 16px !important;
+            }
+            
+            #a965_header img {
+                width: 50px !important;
+                margin-left: 1rem;
+            }
+            
+            #a965_header .a965_header_hammenu {
+                width: 32px;
+                height: 32px;
+            }
+            
+            #a965_header .a965_header_hammenu span {
+                height: 3px;
+                border-radius: 1.5px;
+            }
+            
+            #a965_festlogo {
+                height: 60vh;
+            }
+            
+            #a965_festlogo .a965_festlogo_content {
+                padding: 0 0 24px 16px;
+            }
+            
+            #a965_festlogo .a965_festlogo_content h2 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #a965_header img {
+                width: 40px !important;
+                margin-left: 0.5rem;
+            }
+            
+            #a965_header nav {
+                padding-top: 12px !important;
+                padding-right: 12px !important;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <header id="a965_header" class="a965_header">
+        <nav>
+            <a href="index.html">
+                <img src="images/logo-icons/19sixtyfive Logo-white.svg" alt="1965 logo" width="80px">
+            </a>
+            <div class="a965_header_hammenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="off_screen_menu">
+            <a style="padding: 0;" href="index.html">
+                <img src="images/logo-icons/19sixtyfive Logo-white.svg" alt="logo-1965">
+            </a>
+            <button class="a965_header_hammenu close" aria-label="Close menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="a965_header_menu">
+                <ul>
+                    <li><a href="single.html">Festivals</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="artist-spotlight.html">Artist Spotlight</a></li>
+                    <li><a href="brands-collab.html">Brands Collab</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="our-fam.html">Our Fam</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <section id="a965_festlogo" class="a965_festogo">
         <img class="a965_festlogo_bg" src="images/our fam/24OWLS Banner Image.png" alt="concert" >
@@ -39,7 +181,7 @@
             </div>
         </div>
         <div class="a965_brand_index_list">
-            <img src="images/brands-collab/collabs/H&M’s Perfect 10.png" alt="H&M Perfect 10">
+            <img src="images/brands-collab/collabs/H&M's Perfect 10.png" alt="H&M Perfect 10">
             <div class="a965_brand_index_text">
                 <h2>The Perfect 10 <br> (H&M's Perfect 10)</h2>
                 <button>View More</button>
@@ -49,6 +191,42 @@
             <img src="images/brands-collab/collabs/The Straits Times Article.png" alt="H&M Take Care">
             <div class="a965_brand_index_text">
                 <h2>Repair, Remake and Refresh <br> (H&M Take Care)</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <!-- Tambahan konten untuk demo load more -->
+        <div class="a965_brand_index_list">
+            <img src="images/brands-collab/H&M - Hover.png" alt="H&M Collection 1">
+            <div class="a965_brand_index_text">
+                <h2>Summer Collection <br> (H&M Summer 2024)</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="a965_brand_index_list">
+            <img src="images/brands-collab/collabs/H&M Studio Special.png" alt="H&M Studio Special 2">
+            <div class="a965_brand_index_text">
+                <h2>Studio Special Vol.2 <br> (H&M Studio x Local Artists)</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="a965_brand_index_list">
+            <img src="images/brands-collab/collabs/H&M Member.png" alt="H&M Member Exclusive">
+            <div class="a965_brand_index_text">
+                <h2>Member Exclusive <br> (H&M Member Benefits)</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="a965_brand_index_list">
+            <img src="images/brands-collab/collabs/H&M's Perfect 10.png" alt="H&M Perfect 10 Limited">
+            <div class="a965_brand_index_text">
+                <h2>Perfect 10 Limited Edition <br> (H&M Limited Collection)</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="a965_brand_index_list">
+            <img src="images/brands-collab/collabs/The Straits Times Article.png" alt="H&M Sustainability">
+            <div class="a965_brand_index_text">
+                <h2>Sustainable Fashion <br> (H&M Green Initiative)</h2>
                 <button>View More</button>
             </div>
         </div>
@@ -87,7 +265,9 @@
             <li><a href="https://tangentmoves.sg/">tangentmoves.sg</a></li>
         </ul>
     </footer>
+    <script src="js/navbar.js"></script>
     <script src="js/index.js"></script>
     <script src="js/single.js"></script>
+    <script src="js/load-more.js"></script>
 </body>
 </html>
